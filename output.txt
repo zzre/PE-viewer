@@ -1,0 +1,472 @@
+[+] DOS Header
+┌ 0x00000000	e_magic   	5A4D	MZ	/* DOS Signature */
+├ 0x00000002	e_cblp    	0090
+├ 0x00000004	e_cp      	0003
+├ 0x00000006	e_crlc    	0000
+├ 0x00000008	e_cparhdr 	0004
+├ 0x0000000A	e_minalloc	0000
+├ 0x0000000C	e_maxalloc	FFFF
+├ 0x0000000E	e_ss      	0000
+├ 0x00000010	e_sp      	00B8
+├ 0x00000012	e_csum    	0000
+├ 0x00000014	e_ip      	0000
+├ 0x00000016	e_cs      	0000
+├ 0x00000018	e_lfarlc  	0040
+├ 0x0000001A	e_ovno    	0000
+├ 0x0000001C	e_res[0]  	0000
+├ 0x0000001E	e_res[1]  	0000
+├ 0x00000020	e_res[2]  	0000
+├ 0x00000022	e_res[3]  	0000
+├ 0x00000024	e_oemid   	0000
+├ 0x00000026	e_oeminfo 	0000
+├ 0x00000028	e_res2[0] 	0000
+├ 0x0000002A	e_res2[1] 	0000
+├ 0x0000002C	e_res2[2] 	0000
+├ 0x0000002E	e_res2[3] 	0000
+├ 0x00000030	e_res2[4] 	0000
+├ 0x00000032	e_res2[5] 	0000
+├ 0x00000034	e_res2[6] 	0000
+├ 0x00000036	e_res2[7] 	0000
+├ 0x00000038	e_res2[8] 	0000
+├ 0x0000003A	e_res2[9] 	0000
+└ 0x0000003C	e_lfanew  	000000E0
+
+[+] NT Header
+┌─ IMAGE_FILE_HEADER
+│  ├ 0x000000E0	Signature                	00004550	PE
+│  ├ 0x000000E4	Machine                  	014C
+│  ├ 0x000000E6	NumberOfSections         	0003
+│  ├ 0x000000E8	TimeDateStamp            	48025287
+│  ├ 0x000000EC	PointerToSymbolTable     	00000000
+│  ├ 0x000000F0	NumberOfSymbols          	00000000
+│  ├ 0x000000F4	SizeOfOptionalHeader     	00E0
+│  └ 0x000000F6	Characteristics          	010F
+│		├ IMAGE_FILE_RELOCS_STRIPPED
+│		├ IMAGE_FILE_EXECUTABLE_IMAGE
+│		├ IMAGE_FILE_LINE_NUMS_STRIPPED
+│		├ IMAGE_FILE_LOCAL_SYMS_STRIPPED
+│		└ IMAGE_FILE_32BIT_MACHINE
+│
+└─ IMAGE_OPTIONAL_HEADER32
+   ├ 0x000000F8	Magic                    	010B
+   ├ 0x000000FA	MajorLinkerVersion       	07
+   ├ 0x000000FB	MinorLinkerVersion       	0A
+   ├ 0x000000FC	SizeOfCode               	00007800
+   ├ 0x00000100	SizeOfInitializedData    	00008C00
+   ├ 0x00000104	SizeOfUninitializedData  	00000000
+   ├ 0x00000108	AddressOfEntryPoint      	0000739D
+   ├ 0x0000010C	BaseOfCode               	00001000
+   ├ 0x00000110	BaseOfData               	00009000
+   ├ 0x00000114	ImageBase                	01000000
+   ├ 0x00000118	SectionAlignment         	00001000
+   ├ 0x0000011C	FileAlignment            	00000200
+   ├ 0x00000120	MajorOperatingSystemVersion	0005
+   ├ 0x00000122	MinorOperatingSystemVersion	0001
+   ├ 0x00000124	MajorImageVersion        	0005
+   ├ 0x00000126	MinorImageVersion        	0001
+   ├ 0x00000128	MajorSubsystemVersion    	0004
+   ├ 0x0000012A	MinorSubsystemVersion    	0000
+   ├ 0x0000012C	Win32VersionValue        	00000000
+   ├ 0x00000130	SizeOfImage              	00014000
+   ├ 0x00000134	SizeOfHeaders            	00000400
+   ├ 0x00000138	CheckSum                 	000126CE
+   ├ 0x0000013C	Subsystem                	0002
+   ├ 0x0000013E	DllCharacteristics       	8000
+   ├ 0x00000140	SizeOfStackReserve       	00040000
+   ├ 0x00000144	SizeOfStackCommit        	00011000
+   ├ 0x00000148	SizeOfHeapReserve        	00100000
+   ├ 0x0000014C	SizeOfHeapCommit         	00001000
+   ├ 0x00000150	LoaderFlags              	00000000
+   └ 0x00000154	NumberOfRvaAndSizes      	00000010
+		├ 0x00000158	EXPORT Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x00000160	IMPORT Directory
+		│		├ RVA	00007604
+		│		└ Size	000000C8
+		│
+		├ 0x00000168	RESOURCE Directory
+		│		├ RVA	0000B000
+		│		└ Size	00008304
+		│
+		├ 0x00000170	EXCEPTION Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x00000178	SECURITY Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x00000180	BASERELOC Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x00000188	DEBUG Directory
+		│		├ RVA	00001350
+		│		└ Size	0000001C
+		│
+		├ 0x00000190	COPYRIGHT Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x00000198	GLOBALPTR Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x000001A0	TLS Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x000001A8	LOAD_CONFIG Directory
+		│		├ RVA	000018A8
+		│		└ Size	00000040
+		│
+		├ 0x000001B0	BOUND_IMPORT Directory
+		│		├ RVA	00000250
+		│		└ Size	000000D0
+		│
+		├ 0x000001B8	IAT Directory
+		│		├ RVA	00001000
+		│		└ Size	00000348
+		│
+		├ 0x000001C0	DELAY_IMPORT Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		├ 0x000001C8	COM_DESCRIPTOR Directory
+		│		├ RVA	00000000
+		│		└ Size	00000000
+		│
+		└ 0x000001D0	Reserved Directory
+				├ RVA	00000000
+				└ Size	00000000
+
+[+] IMAGE_SECTION_HEADER
+┌─ IMAGE_SECTION_HEADER .text
+│  ├ 0x000001D8	Name                          	000000747865742E	.text
+│  ├ 0x000001E0	PhysicalAddress/VirtualSize   	00007748
+│  ├ 0x000001E4	VirtualAddress                	00001000
+│  ├ 0x000001E8	SizeOfRawData                 	00007800
+│  ├ 0x000001EC	PointerToRawData              	00000400
+│  ├ 0x000001F0	PointerToRelocations          	00000000
+│  ├ 0x000001F4	PointerToLinenumbers          	00000000
+│  ├ 0x000001F8	NumberOfRelocations           	0000
+│  ├ 0x000001FA	NumberOfLinenumbers           	0000
+│  └ 0x000001FC	Characteristics               	60000020
+│		├ IMAGE_SCN_CNT_CODE
+│		├ IMAGE_SCN_MEM_EXECUTE
+│		└ IMAGE_SCN_MEM_READ
+│
+├─ IMAGE_SECTION_HEADER .data
+│  ├ 0x00000200	Name                          	000000617461642E	.data
+│  ├ 0x00000208	PhysicalAddress/VirtualSize   	00001BA8
+│  ├ 0x0000020C	VirtualAddress                	00009000
+│  ├ 0x00000210	SizeOfRawData                 	00000800
+│  ├ 0x00000214	PointerToRawData              	00007C00
+│  ├ 0x00000218	PointerToRelocations          	00000000
+│  ├ 0x0000021C	PointerToLinenumbers          	00000000
+│  ├ 0x00000220	NumberOfRelocations           	0000
+│  ├ 0x00000222	NumberOfLinenumbers           	0000
+│  └ 0x00000224	Characteristics               	C0000040
+│		├ IMAGE_SCN_CNT_INITIALIZED_DATA
+│		├ IMAGE_SCN_MEM_READ
+│		├ IMAGE_SCN_MEM_WRITE
+│
+└─ IMAGE_SECTION_HEADER .rsrc
+   ├ 0x00000228	Name                          	000000637273722E	.rsrc
+   ├ 0x00000230	PhysicalAddress/VirtualSize   	00008304
+   ├ 0x00000234	VirtualAddress                	0000B000
+   ├ 0x00000238	SizeOfRawData                 	00008400
+   ├ 0x0000023C	PointerToRawData              	00008400
+   ├ 0x00000240	PointerToRelocations          	00000000
+   ├ 0x00000244	PointerToLinenumbers          	00000000
+   ├ 0x00000248	NumberOfRelocations           	0000
+   ├ 0x0000024A	NumberOfLinenumbers           	0000
+   └ 0x0000024C	Characteristics               	40000040
+ 		├ IMAGE_SCN_CNT_INITIALIZED_DATA
+ 		└ IMAGE_SCN_MEM_READ
+ 
+[+] IMAGE_IMPORT_DESCRIPTOR
+    comdlg32.dll
+    ┌ 0x00006A04 OriginalFirstThunk  	00007990
+    ├ 0x00006A08 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A0C ForwarderChain      	FFFFFFFF
+    ├ 0x00006A10 Name                	00007AAC
+    ├ 0x00006A14 FirstThunk          	000012C4
+    │
+    └─────────── Import Address Table
+		┌ 0x000006C4 PageSetupDlgW                 	(ordinal : 000F)
+		├ 0x000006C8 FindTextW                     	(ordinal : 0006)
+		├ 0x000006CC PrintDlgExW                   	(ordinal : 0012)
+		├ 0x000006D0 ChooseFontW                   	(ordinal : 0003)
+		├ 0x000006D4 GetFileTitleW                 	(ordinal : 0008)
+		├ 0x000006D8 GetOpenFileNameW              	(ordinal : 000A)
+		├ 0x000006DC ReplaceTextW                  	(ordinal : 0015)
+		├ 0x000006E0 CommDlgExtendedError          	(ordinal : 0004)
+		└ 0x000006E4 GetSaveFileNameW              	(ordinal : 000C)
+
+    SHELL32.dll
+    ┌ 0x00006A18 OriginalFirstThunk  	00007840
+    ├ 0x00006A1C TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A20 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A24 Name                	00007AFA
+    ├ 0x00006A28 FirstThunk          	00001174
+    │
+    └─────────── Import Address Table
+		┌ 0x00000574 DragFinish                    	(ordinal : 001F)
+		├ 0x00000578 DragQueryFileW                	(ordinal : 0023)
+		├ 0x0000057C DragAcceptFiles               	(ordinal : 001E)
+		└ 0x00000580 ShellAboutW                   	(ordinal : 0103)
+
+    WINSPOOL.DRV
+    ┌ 0x00006A2C OriginalFirstThunk  	00007980
+    ├ 0x00006A30 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A34 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A38 Name                	00007B3A
+    ├ 0x00006A3C FirstThunk          	000012B4
+    │
+    └─────────── Import Address Table
+		┌ 0x000006B4 GetPrinterDriverW             	(ordinal : 0078)
+		├ 0x000006B8 ClosePrinter                  	(ordinal : 001B)
+		└ 0x000006BC OpenPrinterW                  	(ordinal : 007E)
+
+    COMCTL32.dll
+    ┌ 0x00006A40 OriginalFirstThunk  	000076EC
+    ├ 0x00006A44 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A48 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A4C Name                	00007B5E
+    ├ 0x00006A50 FirstThunk          	00001020
+    │
+    └─────────── Import Address Table
+		─ 0x00000420 CreateStatusWindowW           	(ordinal : 0008)
+
+    msvcrt.dll
+    ┌ 0x00006A54 OriginalFirstThunk  	000079B8
+    ├ 0x00006A58 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A5C ForwarderChain      	FFFFFFFF
+    ├ 0x00006A60 Name                	00007C76
+    ├ 0x00006A64 FirstThunk          	000012EC
+    │
+    └─────────── Import Address Table
+		┌ 0x000006EC _XcptFilter                   	(ordinal : 004E)
+		├ 0x000006F0 _exit                         	(ordinal : 00F6)
+		├ 0x000006F4 _c_exit                       	(ordinal : 00C5)
+		├ 0x000006F8 time                          	(ordinal : 0317)
+		├ 0x000006FC localtime                     	(ordinal : 02D4)
+		├ 0x00000700 _cexit                        	(ordinal : 00C8)
+		├ 0x00000704 iswctype                      	(ordinal : 02C6)
+		├ 0x00000708 _except_handler3              	(ordinal : 00ED)
+		├ 0x0000070C _wtol                         	(ordinal : 0274)
+		├ 0x00000710 wcsncmp                       	(ordinal : 032F)
+		├ 0x00000714 _snwprintf                    	(ordinal : 01E4)
+		├ 0x00000718 exit                          	(ordinal : 0290)
+		├ 0x0000071C _acmdln                       	(ordinal : 00A8)
+		├ 0x00000720 __getmainargs                 	(ordinal : 006D)
+		├ 0x00000724 _initterm                     	(ordinal : 013B)
+		├ 0x00000728 __setusermatherr              	(ordinal : 009A)
+		├ 0x0000072C _adjust_fdiv                  	(ordinal : 00B6)
+		├ 0x00000730 __p__commode                  	(ordinal : 0080)
+		├ 0x00000734 __p__fmode                    	(ordinal : 0085)
+		├ 0x00000738 __set_app_type                	(ordinal : 0098)
+		├ 0x0000073C _controlfp                    	(ordinal : 00D6)
+		└ 0x00000740 wcsncpy                       	(ordinal : 0330)
+
+    ADVAPI32.dll
+    ┌ 0x00006A68 OriginalFirstThunk  	000076CC
+    ├ 0x00006A6C TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A70 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A74 Name                	00007D08
+    ├ 0x00006A78 FirstThunk          	00001000
+    │
+    └─────────── Import Address Table
+		┌ 0x00000400 RegQueryValueExW              	(ordinal : 01EF)
+		├ 0x00000404 RegCloseKey                   	(ordinal : 01CA)
+		├ 0x00000408 RegCreateKeyW                 	(ordinal : 01D0)
+		├ 0x0000040C IsTextUnicode                 	(ordinal : 0139)
+		├ 0x00000410 RegQueryValueExA              	(ordinal : 01EE)
+		├ 0x00000414 RegOpenKeyExA                 	(ordinal : 01E4)
+		└ 0x00000418 RegSetValueExW                	(ordinal : 01FC)
+
+    KERNEL32.dll
+    ┌ 0x00006A7C OriginalFirstThunk  	00007758
+    ├ 0x00006A80 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A84 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A88 Name                	000080EC
+    ├ 0x00006A8C FirstThunk          	0000108C
+    │
+    └─────────── Import Address Table
+		┌ 0x0000048C GetCurrentThreadId            	(ordinal : 013E)
+		├ 0x00000490 GetTickCount                  	(ordinal : 01D4)
+		├ 0x00000494 QueryPerformanceCounter       	(ordinal : 0294)
+		├ 0x00000498 GetLocalTime                  	(ordinal : 016A)
+		├ 0x0000049C GetUserDefaultLCID            	(ordinal : 01D8)
+		├ 0x000004A0 GetDateFormatW                	(ordinal : 0140)
+		├ 0x000004A4 GetTimeFormatW                	(ordinal : 01D6)
+		├ 0x000004A8 GlobalLock                    	(ordinal : 01F8)
+		├ 0x000004AC GlobalUnlock                  	(ordinal : 01FF)
+		├ 0x000004B0 GetFileInformationByHandle    	(ordinal : 015A)
+		├ 0x000004B4 CreateFileMappingW            	(ordinal : 0051)
+		├ 0x000004B8 GetSystemTimeAsFileTime       	(ordinal : 01C0)
+		├ 0x000004BC TerminateProcess              	(ordinal : 034A)
+		├ 0x000004C0 GetCurrentProcess             	(ordinal : 013B)
+		├ 0x000004C4 SetUnhandledExceptionFilter   	(ordinal : 0336)
+		├ 0x000004C8 LoadLibraryA                  	(ordinal : 0244)
+		├ 0x000004CC GetModuleHandleA              	(ordinal : 0176)
+		├ 0x000004D0 GetStartupInfoA               	(ordinal : 01AE)
+		├ 0x000004D4 GlobalFree                    	(ordinal : 01F4)
+		├ 0x000004D8 GetLocaleInfoW                	(ordinal : 016C)
+		├ 0x000004DC LocalFree                     	(ordinal : 024E)
+		├ 0x000004E0 LocalAlloc                    	(ordinal : 024A)
+		├ 0x000004E4 lstrlenW                      	(ordinal : 03B8)
+		├ 0x000004E8 LocalUnlock                   	(ordinal : 0254)
+		├ 0x000004EC CompareStringW                	(ordinal : 0038)
+		├ 0x000004F0 LocalLock                     	(ordinal : 0250)
+		├ 0x000004F4 FoldStringW                   	(ordinal : 00EA)
+		├ 0x000004F8 CloseHandle                   	(ordinal : 0031)
+		├ 0x000004FC lstrcpyW                      	(ordinal : 03B2)
+		├ 0x00000500 ReadFile                      	(ordinal : 02A6)
+		├ 0x00000504 CreateFileW                   	(ordinal : 0052)
+		├ 0x00000508 lstrcmpiW                     	(ordinal : 03AF)
+		├ 0x0000050C GetCurrentProcessId           	(ordinal : 013C)
+		├ 0x00000510 GetProcAddress                	(ordinal : 0198)
+		├ 0x00000514 GetCommandLineW               	(ordinal : 010A)
+		├ 0x00000518 lstrcatW                      	(ordinal : 03A9)
+		├ 0x0000051C FindClose                     	(ordinal : 00CC)
+		├ 0x00000520 FindFirstFileW                	(ordinal : 00D3)
+		├ 0x00000524 GetFileAttributesW            	(ordinal : 0159)
+		├ 0x00000528 lstrcmpW                      	(ordinal : 03AC)
+		├ 0x0000052C MulDiv                        	(ordinal : 0266)
+		├ 0x00000530 lstrcpynW                     	(ordinal : 03B5)
+		├ 0x00000534 LocalSize                     	(ordinal : 0253)
+		├ 0x00000538 GetLastError                  	(ordinal : 0168)
+		├ 0x0000053C WriteFile                     	(ordinal : 038F)
+		├ 0x00000540 SetLastError                  	(ordinal : 0316)
+		├ 0x00000544 WideCharToMultiByte           	(ordinal : 0382)
+		├ 0x00000548 LocalReAlloc                  	(ordinal : 0251)
+		├ 0x0000054C FormatMessageW                	(ordinal : 00EC)
+		├ 0x00000550 GetUserDefaultUILanguage      	(ordinal : 01DA)
+		├ 0x00000554 SetEndOfFile                  	(ordinal : 0300)
+		├ 0x00000558 DeleteFileW                   	(ordinal : 0082)
+		├ 0x0000055C GetACP                        	(ordinal : 00F6)
+		├ 0x00000560 UnmapViewOfFile               	(ordinal : 035E)
+		├ 0x00000564 MultiByteToWideChar           	(ordinal : 0267)
+		├ 0x00000568 MapViewOfFile                 	(ordinal : 025A)
+		└ 0x0000056C UnhandledExceptionFilter      	(ordinal : 035B)
+
+    GDI32.dll
+    ┌ 0x00006A90 OriginalFirstThunk  	000076F4
+    ├ 0x00006A94 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006A98 ForwarderChain      	FFFFFFFF
+    ├ 0x00006A9C Name                	0000825E
+    ├ 0x00006AA0 FirstThunk          	00001028
+    │
+    └─────────── Import Address Table
+		┌ 0x00000428 EndPage                       	(ordinal : 0098)
+		├ 0x0000042C AbortDoc                      	(ordinal : 0000)
+		├ 0x00000430 EndDoc                        	(ordinal : 0096)
+		├ 0x00000434 DeleteDC                      	(ordinal : 008C)
+		├ 0x00000438 StartPage                     	(ordinal : 0249)
+		├ 0x0000043C GetTextExtentPoint32W         	(ordinal : 01B6)
+		├ 0x00000440 CreateDCW                     	(ordinal : 002F)
+		├ 0x00000444 SetAbortProc                  	(ordinal : 0211)
+		├ 0x00000448 GetTextFaceW                  	(ordinal : 01BC)
+		├ 0x0000044C TextOutW                      	(ordinal : 0250)
+		├ 0x00000450 StartDocW                     	(ordinal : 0247)
+		├ 0x00000454 EnumFontsW                    	(ordinal : 00CE)
+		├ 0x00000458 GetStockObject                	(ordinal : 01A6)
+		├ 0x0000045C GetObjectW                    	(ordinal : 0198)
+		├ 0x00000460 GetDeviceCaps                 	(ordinal : 016C)
+		├ 0x00000464 CreateFontIndirectW           	(ordinal : 003D)
+		├ 0x00000468 DeleteObject                  	(ordinal : 008F)
+		├ 0x0000046C GetTextMetricsW               	(ordinal : 01BE)
+		├ 0x00000470 SetBkMode                     	(ordinal : 0217)
+		├ 0x00000474 LPtoDP                        	(ordinal : 01CC)
+		├ 0x00000478 SetWindowExtEx                	(ordinal : 0243)
+		├ 0x0000047C SetViewportExtEx              	(ordinal : 023F)
+		├ 0x00000480 SetMapMode                    	(ordinal : 022C)
+		└ 0x00000484 SelectObject                  	(ordinal : 020F)
+
+    USER32.dll
+    ┌ 0x00006AA4 OriginalFirstThunk  	00007854
+    ├ 0x00006AA8 TimeDateStamp       	FFFFFFFF
+    ├ 0x00006AAC ForwarderChain      	FFFFFFFF
+    ├ 0x00006AB0 Name                	0000873C
+    ├ 0x00006AB4 FirstThunk          	00001188
+    │
+    └─────────── Import Address Table
+		┌ 0x00000588 GetClientRect                 	(ordinal : 00FF)
+		├ 0x0000058C SetCursor                     	(ordinal : 024D)
+		├ 0x00000590 ReleaseDC                     	(ordinal : 022A)
+		├ 0x00000594 GetDC                         	(ordinal : 010C)
+		├ 0x00000598 DialogBoxParamW               	(ordinal : 009F)
+		├ 0x0000059C SetActiveWindow               	(ordinal : 0243)
+		├ 0x000005A0 GetKeyboardLayout             	(ordinal : 0122)
+		├ 0x000005A4 DefWindowProcW                	(ordinal : 008F)
+		├ 0x000005A8 DestroyWindow                 	(ordinal : 0099)
+		├ 0x000005AC MessageBeep                   	(ordinal : 01DB)
+		├ 0x000005B0 ShowWindow                    	(ordinal : 0292)
+		├ 0x000005B4 GetForegroundWindow           	(ordinal : 0117)
+		├ 0x000005B8 IsIconic                      	(ordinal : 01A6)
+		├ 0x000005BC GetWindowPlacement            	(ordinal : 0173)
+		├ 0x000005C0 CharUpperW                    	(ordinal : 0037)
+		├ 0x000005C4 LoadStringW                   	(ordinal : 01C9)
+		├ 0x000005C8 LoadAcceleratorsW             	(ordinal : 01B4)
+		├ 0x000005CC GetSystemMenu                 	(ordinal : 015C)
+		├ 0x000005D0 RegisterClassExW              	(ordinal : 0218)
+		├ 0x000005D4 LoadImageW                    	(ordinal : 01BE)
+		├ 0x000005D8 LoadCursorW                   	(ordinal : 01BA)
+		├ 0x000005DC SetWindowPlacement            	(ordinal : 0282)
+		├ 0x000005E0 CreateWindowExW               	(ordinal : 0061)
+		├ 0x000005E4 GetDesktopWindow              	(ordinal : 010E)
+		├ 0x000005E8 GetFocus                      	(ordinal : 0116)
+		├ 0x000005EC LoadIconW                     	(ordinal : 01BC)
+		├ 0x000005F0 SetWindowTextW                	(ordinal : 0287)
+		├ 0x000005F4 PostQuitMessage               	(ordinal : 0201)
+		├ 0x000005F8 RegisterWindowMessageW        	(ordinal : 0228)
+		├ 0x000005FC UpdateWindow                  	(ordinal : 02BB)
+		├ 0x00000600 SetScrollPos                  	(ordinal : 026F)
+		├ 0x00000604 CharLowerW                    	(ordinal : 0029)
+		├ 0x00000608 PeekMessageW                  	(ordinal : 01FE)
+		├ 0x0000060C EnableWindow                  	(ordinal : 00C4)
+		├ 0x00000610 DrawTextExW                   	(ordinal : 00BE)
+		├ 0x00000614 CreateDialogParamW            	(ordinal : 0056)
+		├ 0x00000618 GetWindowTextW                	(ordinal : 017A)
+		├ 0x0000061C GetSystemMetrics              	(ordinal : 015D)
+		├ 0x00000620 MoveWindow                    	(ordinal : 01E9)
+		├ 0x00000624 InvalidateRect                	(ordinal : 0193)
+		├ 0x00000628 WinHelpW                      	(ordinal : 02D3)
+		├ 0x0000062C GetDlgCtrlID                  	(ordinal : 0110)
+		├ 0x00000630 ChildWindowFromPoint          	(ordinal : 003C)
+		├ 0x00000634 ScreenToClient                	(ordinal : 0231)
+		├ 0x00000638 GetCursorPos                  	(ordinal : 010B)
+		├ 0x0000063C SendDlgItemMessageW           	(ordinal : 0237)
+		├ 0x00000640 SendMessageW                  	(ordinal : 0240)
+		├ 0x00000644 CharNextW                     	(ordinal : 002C)
+		├ 0x00000648 CheckMenuItem                 	(ordinal : 0039)
+		├ 0x0000064C CloseClipboard                	(ordinal : 0042)
+		├ 0x00000650 IsClipboardFormatAvailable    	(ordinal : 019F)
+		├ 0x00000654 OpenClipboard                 	(ordinal : 01F3)
+		├ 0x00000658 GetMenuState                  	(ordinal : 0137)
+		├ 0x0000065C EnableMenuItem                	(ordinal : 00C2)
+		├ 0x00000660 GetSubMenu                    	(ordinal : 0159)
+		├ 0x00000664 GetMenu                       	(ordinal : 012C)
+		├ 0x00000668 MessageBoxW                   	(ordinal : 01E3)
+		├ 0x0000066C SetWindowLongW                	(ordinal : 0281)
+		├ 0x00000670 GetWindowLongW                	(ordinal : 016F)
+		├ 0x00000674 GetDlgItem                    	(ordinal : 0111)
+		├ 0x00000678 SetFocus                      	(ordinal : 0256)
+		├ 0x0000067C SetDlgItemTextW               	(ordinal : 0254)
+		├ 0x00000680 wsprintfW                     	(ordinal : 02D9)
+		├ 0x00000684 GetDlgItemTextW               	(ordinal : 0114)
+		├ 0x00000688 EndDialog                     	(ordinal : 00C6)
+		├ 0x0000068C GetParent                     	(ordinal : 0145)
+		├ 0x00000690 UnhookWinEvent                	(ordinal : 02AC)
+		├ 0x00000694 DispatchMessageW              	(ordinal : 00A2)
+		├ 0x00000698 TranslateMessage              	(ordinal : 02AA)
+		├ 0x0000069C TranslateAcceleratorW         	(ordinal : 02A8)
+		├ 0x000006A0 IsDialogMessageW              	(ordinal : 01A2)
+		├ 0x000006A4 PostMessageW                  	(ordinal : 0200)
+		├ 0x000006A8 GetMessageW                   	(ordinal : 013E)
+		└ 0x000006AC SetWinEventHook               	(ordinal : 027E)
+
